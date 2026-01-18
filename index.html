@@ -1,296 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>John Mark Cundangan | IT Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Mark Cundangan | Portfolio</title>
   <style>
-    :root {
-      --bg-main: #f4f7fb;
-      --bg-dark: #0b1220;
-      --accent: #3b82f6;
-      --accent-soft: #dbeafe;
-      --text-main: #1e293b;
-      --card-bg: rgba(255,255,255,0.92);
-    }
-
-    html { scroll-behavior: smooth; }
-
     body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      background: var(--bg-main);
-      color: var(--text-main);
+      padding: 0;
+      color: #333;
     }
-
-    /* ---------- NAVBAR ---------- */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      backdrop-filter: blur(10px);
-      background: rgba(11,18,32,0.75);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-    }
-
-    nav .nav-container {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.8rem 1.2rem;
-    }
-
-    nav h2 { color: white; font-size: 1.1rem; letter-spacing: 0.5px; }
-
-    nav a {
-      color: #e5e7eb;
-      margin-left: 1.2rem;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav a:hover { color: var(--accent); }
-
-    /* ---------- HERO / HEADER ---------- */
     header {
-      min-height: 100vh;
-      background:
-        linear-gradient(rgba(11,18,32,0.75), rgba(11,18,32,0.85)),
-        url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
-      background-size: cover;
-      background-position: center;
+      background-color: #3b82f6;
       color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       text-align: center;
-      padding: 2rem 1.5rem;
+      padding: 50px 20px;
     }
-
-    header .hero {
-      max-width: 850px;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.8rem;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      opacity: 0.95;
-      margin-bottom: 1.3rem;
-    }
-
-    .hero-buttons a {
-      display: inline-block;
-      margin: 0.4rem;
-      padding: 0.65rem 1.4rem;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.4);
-      color: white;
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-
-    .hero-buttons a.primary {
-      background: var(--accent);
-      border: none;
-    }
-
-    .hero-buttons a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-      opacity: 0.95;
-    }
-
-    /* ---------- SECTIONS ---------- */
     section {
-      max-width: 1050px;
-      margin: auto;
-      padding: 5rem 1.5rem 3rem;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
     }
-
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1.2rem;
-      position: relative;
-    }
-
-    section h2::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      width: 60px;
-      height: 4px;
-      background: var(--accent);
-      border-radius: 999px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border-radius: 18px;
-      padding: 1.7rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-      backdrop-filter: blur(6px);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.3rem;
-    }
-
-    ul { padding-left: 1.2rem; }
-
-    .tag {
-      display: inline-block;
-      background: var(--accent-soft);
-      color: #1e3a8a;
-      border-radius: 999px;
-      padding: 0.35rem 0.75rem;
-      margin: 0.2rem;
-      font-size: 0.82rem;
-      font-weight: 600;
-    }
-
-    /* ---------- FOOTER ---------- */
     footer {
-      background:
-        linear-gradient(rgba(11,18,32,0.9), rgba(11,18,32,0.95)),
-        url("https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=1600&q=80");
-      background-size: cover;
-      background-position: center;
-      color: white;
       text-align: center;
-      padding: 3rem 1.5rem;
-      margin-top: 3rem;
+      padding: 20px;
+      background: #0b1220;
+      color: white;
     }
-
-    footer p { opacity: 0.85; }
-
+    a {
+      color: #3b82f6;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <div class="nav-container">
-    <h2>JM Portfolio</h2>
-    <div>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
 <header>
-  <div class="hero">
-    <h1>John Mark Cundangan</h1>
-    <p>BS Industrial Technology (Computer Technology) | NCII CSS Certified</p>
-    <p>Flexible, fast‑learning, and hands‑on oriented IT professional</p>
-    <div class="hero-buttons">
-      <a href="#projects" class="primary">View Projects</a>
-      <a href="#contact">Contact Me</a>
-    </div>
-  </div>
+  <h1>John Mark Cundangan</h1>
+  <p>Flexible & Fast-Learning IT Professional</p>
 </header>
 
 <section id="about">
   <h2>About Me</h2>
-  <div class="card">
-    <p>
-      I am a graduate of BS Industrial Technology major in Computer Technology with a strong foundation in hardware, networking, troubleshooting, and system support. I am known as a flexible worker who adapts quickly, learns fast, and takes instruction well. I am NCII Computer Systems Servicing certified and motivated by hands‑on work that improves systems, solves problems, and supports people through technology.
-    </p>
-  </div>
+  <p>I am a graduate of BS Industrial Technology major in Computer Technology with NCII Computer Systems Servicing Certification. I am adaptable, hands-on, and eager to learn new IT skills quickly.</p>
 </section>
 
 <section id="skills">
-  <h2>Technical Skills</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Hardware & Systems</h3>
-      <span class="tag">PC Assembly</span>
-      <span class="tag">Troubleshooting</span>
-      <span class="tag">Preventive Maintenance</span>
-      <span class="tag">Peripheral Setup</span>
-    </div>
-    <div class="card">
-      <h3>Networking</h3>
-      <span class="tag">LAN Setup</span>
-      <span class="tag">IP Addressing</span>
-      <span class="tag">Router/Switch Config</span>
-      <span class="tag">Cable Crimping</span>
-    </div>
-    <div class="card">
-      <h3>Software & Tools</h3>
-      <span class="tag">Windows Installation</span>
-      <span class="tag">Basic Linux</span>
-      <span class="tag">QGIS</span>
-      <span class="tag">MS Office</span>
-    </div>
-  </div>
+  <h2>Skills</h2>
+  <ul>
+    <li>Hardware: PC Assembly, Troubleshooting</li>
+    <li>Networking: LAN Setup, IP Addressing</li>
+    <li>Software: Windows, Basic Linux, QGIS</li>
+  </ul>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
-  <div class="card">
-    <h3>Flood Risk Mapping and Elevation Analysis (QGIS)</h3>
-    <p>Developed elevation profiles and identified critical low‑lying areas to support flood‑risk assessment in Tiaong, Quezon. The project focused on translating raw geographic data into practical insights that can support local planning and disaster awareness.</p>
-    <p><b>Tools:</b> QGIS, DEM Data, GPS Referencing, Spatial Analysis</p>
-  </div>
-
-  <div class="card">
-    <h3>Network Setup and Computer Systems Maintenance</h3>
-    <p>Designed and implemented small‑scale LAN setups, assembled and configured system units, installed operating systems, and performed structured troubleshooting to restore and optimize system performance.</p>
-    <p><b>Tools:</b> Routers, Switches, Windows OS, Structured Cabling</p>
-  </div>
-</section>
-
-<section id="education">
-  <h2>Education & Certification</h2>
-  <div class="card">
-    <ul>
-      <li><b>Bachelor of Science in Industrial Technology</b> – Major in Computer Technology</li>
-      <li><b>NCII Computer Systems Servicing Certification</b></li>
-    </ul>
-  </div>
-</section>
-
-<section>
-  <h2>Leadership & Experience</h2>
-  <div class="card">
-    <ul>
-      <li><b>Barangay Captain</b> – Provided leadership, coordinated projects, and supported community operations.</li>
-      <li><b>Youth Council Chairperson</b> – Organized youth programs, managed activities, and worked with teams to deliver community initiatives.</li>
-      <li><b>Technical Support Roles</b> – Assisted with computer setup, maintenance, and troubleshooting for school and community‑based projects.</li>
-    </ul>
-  </div>
+  <ul>
+    <li>Flood Risk Mapping & Elevation Analysis (QGIS)</li>
+    <li>Network Setup & Computer Systems Maintenance</li>
+  </ul>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
-  <div class="card">
-    <p>If you are interested in working with me, collaborating on a project, or learning more about my background, feel free to reach out:</p>
-    <p>📧 yourname@email.com</p>
-    <p>📱 09xx-xxx-xxxx</p>
-    <p>GitHub / LinkedIn / Google Drive Portfolio Links</p>
-  </div>
+  <p>Email: yourname@email.com</p>
+  <p>Phone: 09xx-xxx-xxxx</p>
+  <p>GitHub / LinkedIn / Portfolio Links</p>
 </section>
 
 <footer>
-  <p>© 2026 John Mark Cundangan | IT Portfolio</p>
+  <p>© 2026 John Mark Cundangan</p>
 </footer>
 
 </body>
