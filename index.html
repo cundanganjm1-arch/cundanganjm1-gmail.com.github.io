@@ -23,7 +23,6 @@
       color: var(--text-main);
     }
 
-    /* NAVBAR */
     nav {
       position: fixed;
       top: 0;
@@ -47,7 +46,6 @@
     nav a { color: #e5e7eb; margin-left: 1.2rem; text-decoration: none; font-weight: 500; transition: color 0.3s; }
     nav a:hover { color: var(--accent); }
 
-    /* HERO */
     header {
       min-height: 100vh;
       background:
@@ -63,9 +61,9 @@
       padding: 2rem 1.5rem;
     }
 
-    header .hero { max-width: 850px; }
-    header h1 { font-size: 3rem; margin-bottom: 0.8rem; letter-spacing: 1px; }
-    header p { font-size: 1.1rem; opacity: 0.95; margin-bottom: 1.3rem; }
+    header .hero { max-width: 850px; text-align: justify; }
+    header h1 { font-size: 3rem; margin-bottom: 0.8rem; letter-spacing: 1px; text-align: center; }
+    header p { font-size: 1.1rem; opacity: 0.95; margin-bottom: 1.3rem; text-align: justify; }
 
     .hero-buttons a {
       display: inline-block; margin: 0.4rem; padding: 0.65rem 1.4rem;
@@ -76,8 +74,7 @@
     .hero-buttons a.primary { background: var(--accent); border: none; }
     .hero-buttons a:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,0,0,0.35); opacity: 0.95; }
 
-    /* SECTIONS */
-    section { max-width: 1050px; margin: auto; padding: 5rem 1.5rem 3rem; }
+    section { max-width: 1050px; margin: auto; padding: 5rem 1.5rem 3rem; text-align: justify; }
     section h2 { font-size: 2rem; margin-bottom: 1.2rem; position: relative; }
     section h2::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 60px; height: 4px; background: var(--accent); border-radius: 999px; }
 
@@ -96,7 +93,6 @@
     }
     .tag:hover { transform: scale(1.1); background: var(--accent); color: white; }
 
-    /* FOOTER */
     footer {
       background:
         linear-gradient(rgba(28,28,30,0.9), rgba(28,28,30,0.95)),
@@ -111,6 +107,13 @@
 
     footer p { opacity: 0.85; }
 
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1rem; }
+      nav .nav-container { flex-direction: column; gap: 0.5rem; }
+      .grid { grid-template-columns: 1fr; }
+    }
+
   </style>
 </head>
 <body>
@@ -121,6 +124,7 @@
     <div>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
+      <a href="#qualification">Qualification</a>
       <a href="#projects">Projects</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
@@ -148,7 +152,7 @@
 </section>
 
 <section id="skills">
-  <h2>Technical Skills</h2>
+  <h2>Technical & Personal Skills</h2>
   <div class="grid">
     <div class="card">
       <h3>Hardware & Systems</h3>
@@ -171,6 +175,21 @@
       <span class="tag">QGIS</span>
       <span class="tag">MS Office</span>
     </div>
+    <div class="card">
+      <h3>Personal Skills</h3>
+      <span class="tag">Problem Solving</span>
+      <span class="tag">Teamwork</span>
+      <span class="tag">Time Management</span>
+      <span class="tag">Adaptability</span>
+      <span class="tag">Attention to Detail</span>
+    </div>
+  </div>
+</section>
+
+<section id="qualification">
+  <h2>Qualification Summary</h2>
+  <div class="card">
+    <p>Enthusiastic and detail-oriented IT professional with solid foundations in computer systems, networking, and cybersecurity principles. Adept at troubleshooting hardware/software issues and providing efficient tech support. Fast learner, highly adaptable, and motivated to ensure system reliability and security in entry-level Tech Support, Network Support, or Cybersecurity roles.</p>
   </div>
 </section>
 
@@ -198,22 +217,12 @@
   </div>
 </section>
 
-<section>
-  <h2>Leadership & Experience</h2>
-  <div class="card">
-    <ul>
-      <li><b>Barangay Captain</b> – Provided leadership, coordinated projects, and supported community operations.</li>
-      <li><b>Youth Council Chairperson</b> – Organized youth programs, managed activities, and worked with teams to deliver community initiatives.</li>
-      <li><b>Technical Support Roles</b> – Assisted with computer setup, maintenance, and troubleshooting for school and community projects.</li>
-    </ul>
-  </div>
-</section>
-
 <section id="contact">
   <h2>Contact</h2>
   <div class="card">
     <p>📧 cundanganjm1@gmail.com</p>
     <p>📱 09652681856</p>
+    <p>Facebook: JM Doromal Cundangan</p>
     <p>LinkedIn / Google Drive Portfolio Links</p>
   </div>
 </section>
