@@ -1,0 +1,104 @@
+NIKEUSA.com: d1, a1, p1
+D1: Accenture switch
+config t
+vlan 3
+name NIKEUSA.COM
+vlan 4
+name BANKOFAMERICA
+vlan 5
+name TRUSTCONDOM.COM
+vlan 6
+name CISCOUSA.COM
+
+Interface vlan 3
+ desc SVIFORNIKEUSA
+ no shut
+ ip add 172.16.16.1 255.255.240.0
+ ip dhcp excluded-add 172.16.16.1 172.16.16.80
+!
+ip dhcp pool NIKEUSA.com
+ network 172.16.16.0 255.255.240.0
+ default-router 172.16.16.1
+domain-name NIKEUSA.COM	
+dns-server 8.8.8.8
+!
+
+end
+@A1:
+CONFIG T
+INT E0/0
+switchport mode access
+switchport access vlan 3
+end
+@p1:
+CONFIG T
+INT E0/0
+ip address dhcp
+no shut
+do bp
+
+
+DHCP SERVER FOR TRUST CONDOM
+Interface vlan 5
+ desc SVIFORTRUSTCONDOM.COM
+ no shut
+ ip add 192.168.80.33 255.255.255.254
+ ip dhcp excluded-add 192.168.80.33 192.168.80.35
+!
+ip dhcp pool CONDOMTRUST.COM
+ network 192.168.80.33 255.255.255.254
+ default-router 192.168.80.33
+domain-name TRUSTCONDOM.COM	
+dns-server 8.8.8.8
+!
+INT E1/0
+switchport mode access
+switchport access vlan 5
+end
+
+@S1
+CONFIG T
+INT E1/0
+ip address dhcp
+no shut
+do bp
+
+
+
+FINAL REVIEW
+
+C1-LTO!
+config t
+Interface vlan 6
+ desc SVIFORTLTO.EGOV.COM
+ no shut
+ ip add 10.0.2.1 255.255.254.0
+ ip dhcp excluded-add 10.0.2.1 10.0.2.50
+!
+ip dhcp pool LTO.EGOV.COM
+ network 10.0.2.0 255.255.254.0
+ default-router 10.0.2.1
+domain-name LTO.EGOV.COM	
+dns-server 8.8.8.8
+!
+C2/D2
+CONFIG T
+INT E1/0
+switchport mode access
+switchport access vlan 6
+end
+
+S2
+CONFIG T
+INT E1/0
+ip address dhcp
+no shut
+do bp
+
+
+
+how to get a MF HIGH PAYING JOB in just 3 weeks:
+ip addr
+208.8.8.133
+
+
